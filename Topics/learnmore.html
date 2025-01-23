@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More - Academic Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+            margin: 0;
+        }
+
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .content h2 {
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn More</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2 id="topic-title">Economic Union</h2>
+            <p id="topic-description">This is a detailed description of the selected topic. Here, you can provide comprehensive information to help users understand the subject better.</p>
+            <a href="index.html" class="back-btn">Back to Topics</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Academic Learning. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Example script for dynamically inserting topic data (can be replaced by backend integration)
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+
+        const topics = {
+            math: {
+                title: 'Mathematics',
+                description: 'Mathematics is the study of numbers, shapes, and patterns. It is essential for understanding the world around us and solving complex problems.'
+            },
+            science: {
+                title: 'Science',
+                description: 'Science explores the physical and natural world through observation and experimentation. It covers physics, chemistry, biology, and more.'
+            },
+            programming: {
+                title: 'Programming',
+                description: 'Programming is the process of creating instructions for computers to execute. Learn different programming languages and software development skills.'
+            },
+            history: {
+                title: 'History',
+                description: 'History is the study of past events, societies, and civilizations. Understanding history helps us learn from the past and shape the future.'
+            }
+        };
+
+        if (topics[topic]) {
+            document.getElementById('topic-title').innerText = topics[topic].title;
+            document.getElementById('topic-description').innerText = topics[topic].description;
+        } else {
+            document.getElementById('topic-title').innerText = 'Economic Union';
+            document.getElementById('topic-description').innerText = 'The topic you are looking for does not exist. Please return to the main page.';
+        }
+    </script>
+</body>
+</html>

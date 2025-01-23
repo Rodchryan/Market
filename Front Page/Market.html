@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market</title>
+    <link rel="stylesheet" href="Market.css">
+    
+</head>
+<body>
+    <div class="header">
+        <a href="/home/rodch/Downloads/Market Website/Front Page/Market.html">HOME</a>
+        <a href="#">CONTACT</a>
+        <a href="#">ABOUT</a>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="menu" id="mobileMenu">
+        <a href="/home/rodch/Downloads/Market Website/Front Page/Market.html">HOME</a>
+        <a href="#">CONTACT</a>
+        <a href="#">ABOUT</a>
+    </div>
+
+    <div class="main-content">
+        <a href="/home/rodch/Downloads/Market Website/Topics/index.html"><h1>MARKET</h1></a>
+        <h2>LET US KNOW MORE ABOUT MARKET</h2>
+        <br>
+        <div class="section-title">TYPES OF MARKET</div>
+
+        <div class="image-grid">
+            <div class="card">
+                <img src="Images/Underground.jpg" alt="Underground Market">
+                <p>Underground Market</p>
+            </div>
+            <div class="card">
+                <img src="Images/Auction.jpg" alt="Auction Market">
+                <p>Auction Market</p>
+            </div>
+            <div class="card">
+                <img src="Images/Financial.jpg" alt="Financial Market">
+                <p>Financial Market</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+

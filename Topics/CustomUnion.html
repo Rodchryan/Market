@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Union</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url("images/37.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+
+        @media (max-width: 768px) {
+            body {
+                background: linear-gradient(135deg, #5b019d, #fd9c00);
+                background-repeat: no-repeat;
+            }
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .menu a:last-child {
+            border-bottom: none;
+        }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .main-content {
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .main-content h1 {
+            font-size: 6vw;
+            margin-bottom: 10px;
+            margin-left: 5%;
+            text-align: left;
+        }
+
+        .main-content h2 {
+            font-size: 4vw;
+            margin-bottom: 40px;
+            margin-left: 5%;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        @media (max-width: 768px) {
+            .main-content h1 {
+                font-size: 10vw;
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .main-content h2 {
+                font-size: 6vw;
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            } 
+        }
+        .contint{
+            background: linear-gradient(180deg, #5e00a2, #ff5e00, #ffe600);
+            padding: 5%;
+        }
+        .content {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 1200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .content h3 {
+            font-size: 2em;
+            color: #5b019d;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .content ul li:before {
+            content: "✔";
+            color: #5b019d;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .content .did-you-know {
+            background: #5b019d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .content .did-you-know h4 {
+            margin: 0 0 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/home/rodch/Downloads/Market Website/Front Page/Market.html">HOME</a>
+        <a href="#">CONTACT</a>
+        <a href="#">ABOUT</a>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="menu" id="mobileMenu">
+        <a href="/home/rodch/Downloads/Market Website/Front Page/Market.html">HOME</a>
+        <a href="#">CONTACT</a>
+        <a href="#">ABOUT</a>
+    </div>
+
+    <div class="main-content">
+        <h1>CUSTOM UNION</h1>
+        <h2>A custom union is a trade agreement in which member countries establish common external tariffs and eliminate internal trade barriers.</h2>
+    </div>
+    <div class="contint">
+        <div class="content">
+            <h3>What is a Custom Union?</h3>
+            <p>
+                A custom union is a type of trade bloc that ensures free trade among member states while applying a uniform tariff on imports from non-member countries.
+            </p>
+
+            <h3>How Custom Unions Work</h3>
+            <p>
+                In a custom union, member states eliminate tariffs and restrictions on trade between them. At the same time, they agree to a common external tariff policy for goods coming from non-member countries.
+            </p>
+
+            <h3>Benefits of Custom Unions</h3>
+            <ul>
+                <li>Elimination of trade barriers within the union</li>
+                <li>Increased trade and economic cooperation</li>
+                <li>Simplified trade policies for member countries</li>
+                <li>Enhanced global trade negotiation power</li>
+            </ul>
+
+            <h3>Challenges of Custom Unions</h3>
+            <ul>
+                <li>Negotiating a common external tariff</li>
+                <li>Potential revenue loss from eliminated internal tariffs</li>
+                <li>Balancing national interests with collective goals</li>
+                <li>Economic disparities among member states</li>
+            </ul>
+
+            <h3>Real-World Examples</h3>
+            <p>
+                The <b>Southern African Customs Union (SACU)</b> is an example of a custom union. It facilitates trade among its members while implementing a common external tariff.
+            </p>
+
+            <div class="did-you-know">
+                <h4>Did You Know?</h4>
+                <p>
+                    The first modern custom union, the Zollverein, was established in 1834 to manage tariffs and economic policies within the German Confederation.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Integration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url("images/30.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+
+        @media (max-width: 768px) {
+            body {
+                background: linear-gradient(135deg, #5b019d, #fd9c00);
+                background-repeat: no-repeat;
+            }
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .menu a:last-child {
+            border-bottom: none;
+        }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .main-content {
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .main-content h1 {
+            font-size: 6vw;
+            margin-bottom: 10px;
+            margin-left: 5%;
+            text-align: left;
+        }
+
+        .main-content h2 {
+            font-size: 4vw;
+            margin-bottom: 40px;
+            margin-left: 5%;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        @media (max-width: 768px) {
+            .main-content h1 {
+                font-size: 10vw;
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .main-content h2 {
+                font-size: 6vw;
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            } 
+        }
+        .contint{
+            background: linear-gradient(180deg, #5e00a2, #ff5e00, #ffe600);
+            padding: 5%;
+        }
+        .content {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 1200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .content h3 {
+            font-size: 2em;
+            color: #5b019d;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .content ul li:before {
+            content: "✔";
+            color: #5b019d;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .content .did-you-know {
+            background: #5b019d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .content .did-you-know h4 {
+            margin: 0 0 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/home/rodch/Downloads/Market Website/Front Page/Market.html">HOME</a>
+        <a href="#">CONTACT</a>
+        <a href="#">ABOUT</a>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="menu" id="mobileMenu">
+        <a href="/home/rodch/Downloads/Market Website/Front Page/Market.html">HOME</a>
+        <a href="#">CONTACT</a>
+        <a href="#">ABOUT</a>
+    </div>
+
+    <div class="main-content">
+        <h1>MARKET INTEGRATION</h1>
+        <h2>Market integration connects different markets, enabling seamless trade and stronger economic ties across regions.</h2>
+    </div>
+    <div class="contint">
+        <div class="content">
+            <h3>What is Market Integration?</h3>
+            <p>
+                Market integration refers to the unification of distinct markets into a single market system. This process allows for efficient trade, reduced costs, and the harmonization of economic policies.
+            </p>
+
+            <h3>How Market Integration Works</h3>
+            <p>
+                Market integration involves removing trade barriers, aligning regulations, and improving infrastructure. By fostering connectivity, it ensures that goods, services, and resources move freely across borders.
+            </p>
+
+            <h3>Benefits of Market Integration</h3>
+            <ul>
+                <li>Boosts economic efficiency</li>
+                <li>Expands market access for businesses</li>
+                <li>Encourages innovation and competition</li>
+                <li>Enhances consumer choice and affordability</li>
+            </ul>
+
+            <h3>Challenges of Market Integration</h3>
+            <ul>
+                <li>Addressing economic disparities among regions</li>
+                <li>Managing regulatory differences</li>
+                <li>Handling potential trade imbalances</li>
+                <li>Ensuring equitable benefits for all participants</li>
+            </ul>
+
+            <h3>Real-World Examples</h3>
+            <p>
+                The <b>ASEAN Economic Community (AEC)</b> is an example of market integration in Southeast Asia. By fostering free trade and investment, it promotes regional economic growth and collaboration.
+            </p>
+
+            <div class="did-you-know">
+                <h4>Did You Know?</h4>
+                <p>
+                    Market integration not only boosts economic growth but also strengthens political and social bonds between participating regions, creating a more interconnected world.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
