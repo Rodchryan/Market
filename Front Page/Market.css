@@ -141,13 +141,12 @@ body {
         }
 
         .image-grid .card {
+            position: relative;
             width: 300px;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             margin: 10px;
-            position: relative;
-            cursor: pointer;
         }
 
         .image-grid .card img {
@@ -157,29 +156,34 @@ body {
             transition: transform 0.3s ease;
         }
 
+        .image-grid .card:hover img {
+            transform: scale(1.1);
+            filter: brightness(50%);
+        }
+
         .image-grid .card p {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            margin: 0;
+            margin: 10px 0;
             font-size: 18px;
             font-weight: bold;
             color: white;
             text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
         }
 
-        .image-grid .card:hover img {
-            transform: scale(1.2);
-            filter: brightness(0.5);
+        .image-grid .card .hover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
         }
 
-        .image-grid .card:hover p {
-            transform: translate(-50%, -50%) scale(1);
+        .image-grid .card:hover .hover-text {
+            opacity: 1;
         }
 
         @media (max-width: 768px) {
