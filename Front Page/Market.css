@@ -146,8 +146,8 @@ body {
     border-radius: 10px;
     overflow: hidden;
     margin: 10px;
-    background: black; /* Default background */
-    box-shadow: white;
+    background: linear-gradient(to bottom, #f0f0f0, #d9d9d9); /* Default background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -160,7 +160,7 @@ body {
 
 .image-grid .card:hover img {
     transform: scale(1.1);
-    filter: brightness(40%);
+    filter: brightness(80%); /* Slight dimming */
 }
 
 .image-grid .card::before {
@@ -170,7 +170,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    background: rgba(255, 255, 255, 0.9); /* White overlay */
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -185,7 +185,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #f1f1f1;
+    color: #333; /* Darker text for contrast */
     font-size: 16px;
     text-align: center;
     line-height: 1.5;
@@ -201,6 +201,7 @@ body {
 
 .image-grid .card .hover-text p {
     margin: 0 0 10px; /* Add spacing between text and link */
+    color: #555; /* Adjust text color for readability */
 }
 
 .image-grid .card .hover-text .more-info {
@@ -209,14 +210,15 @@ body {
     font-size: 14px;
     font-weight: bold;
     color: #fff;
-    background-color: #ff6a00;
+    background-color: #007bff; /* Blue button */
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .image-grid .card .hover-text .more-info:hover {
-    background-color: #e05a00; /* Slightly darker orange on hover */
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Subtle zoom effect */
 }
 
 .image-grid .card:hover {
@@ -228,7 +230,7 @@ body {
     margin: 10px 0;
     font-size: 18px;
     font-weight: bold;
-    color: white;
+    color: #333; /* Adjust default card text color */
     text-align: center;
 }
 
