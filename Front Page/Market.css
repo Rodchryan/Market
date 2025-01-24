@@ -146,7 +146,6 @@ body {
     border-radius: 10px;
     overflow: hidden;
     margin: 10px;
-    background: linear-gradient(to bottom, #f0f0f0, #d9d9d9); /* Default background */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -160,48 +159,61 @@ body {
 
 .image-grid .card:hover img {
     transform: scale(1.1);
-    filter: brightness(80%); /* Slight dimming */
+    filter: brightness(70%);
 }
 
-.image-grid .card::before {
-    content: '';
+.image-grid .card .hover-text {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.9); /* White overlay */
+    background: linear-gradient(to bottom, #b00000, #ff7b00); /* Bold gradient background */
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
-}
-
-.image-grid .card:hover::before {
-    opacity: 1;
-}
-
-.image-grid .card .hover-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #333; /* Darker text for contrast */
-    font-size: 16px;
-    text-align: center;
-    line-height: 1.5;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .image-grid .card:hover .hover-text {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.05); /* Slight zoom on hover text */
+}
+
+.image-grid .card .hover-text .hover-content {
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for the text box */
+    animation: fadeIn 0.3s ease;
+    max-width: 90%; /* Restrict content width */
+    box-sizing: border-box;
+}
+
+.image-grid .card .hover-text h3.definition-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+.image-grid .card .hover-text .divider {
+    width: 50px;
+    height: 2px;
+    background: white;
+    margin: 10px auto;
+    border: none;
 }
 
 .image-grid .card .hover-text p {
-    margin: 0 0 10px; /* Add spacing between text and link */
-    color: #555; /* Adjust text color for readability */
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ddd;
+    margin-bottom: 15px;
 }
 
 .image-grid .card .hover-text .more-info {
@@ -210,28 +222,40 @@ body {
     font-size: 14px;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff; /* Blue button */
+    background-color: #ff7b00; /* Orange button matching gradient */
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .image-grid .card .hover-text .more-info:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #ff5500; /* Slightly darker orange on hover */
     transform: scale(1.1); /* Subtle zoom effect */
-}
-
-.image-grid .card:hover {
-    transform: scale(1.05); /* Slight zoom on card hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Add glow effect */
 }
 
 .image-grid .card p {
     margin: 10px 0;
     font-size: 18px;
     font-weight: bold;
-    color: #333; /* Adjust default card text color */
+    color: #333;
     text-align: center;
+}
+
+.image-grid .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Fade-in animation for hover text */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
         @media (max-width: 768px) {
