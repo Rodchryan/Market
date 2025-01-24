@@ -146,8 +146,8 @@ body {
     border-radius: 10px;
     overflow: hidden;
     margin: 10px;
-    background: white; /* Default background */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: black; /* Default background */
+    box-shadow: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
