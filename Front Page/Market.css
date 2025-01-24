@@ -7,6 +7,7 @@ body {
             background-position: center;
             background-repeat: no-repeat;
             font-family: Arial, sans-serif;
+            color: white;
         }
 
         @media (max-width: 768px) {
@@ -16,6 +17,7 @@ body {
             }
         }
 
+        /* Header Styles */
         .header {
             position: absolute;
             top: 0;
@@ -36,11 +38,15 @@ body {
             text-decoration: underline;
         }
 
+        /* Mobile Menu Styles */
         .menu-icon {
             display: none;
             flex-direction: column;
             gap: 4px;
             cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
 
         .menu-icon div {
@@ -77,9 +83,9 @@ body {
             background-color: rgba(255, 255, 255, 0.1);
         }
 
+        /* Main Content Styles */
         .main-content {
             text-align: center;
-            color: white;
             padding: 50px 20px;
         }
 
@@ -112,16 +118,16 @@ body {
             }
         }
 
-        .main-content .section-title {
+        .section-title {
             font-size: 28px;
             font-weight: bold;
             text-transform: uppercase;
             position: relative;
             text-align: center;
-            width: 100%;
+            margin-bottom: 40px;
         }
 
-        .main-content .section-title::after {
+        .section-title::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -132,6 +138,7 @@ body {
             background-color: orange;
         }
 
+        /* Image Grid Styles */
         .image-grid {
             display: flex;
             justify-content: center;
@@ -166,6 +173,9 @@ body {
             opacity: 0;
             text-align: center;
             transition: opacity 0.3s ease-in-out;
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 0 10px;
         }
 
         .image-grid .card:hover img {
@@ -183,9 +193,6 @@ body {
 
             .menu-icon {
                 display: flex;
-                position: absolute;
-                top: 20px;
-                right: 20px;
             }
 
             .image-grid {
