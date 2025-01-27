@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Market</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url("Financial.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background: linear-gradient(135deg, #1e3c72, #2a5298);
+                background-repeat: no-repeat;
+            }
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .menu a:last-child {
+            border-bottom: none;
+        }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .main-content {
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .main-content h1 {
+            font-size: 6vw;
+            margin-bottom: 10px;
+            margin-left: 5%;
+            text-align: left;
+        }
+
+        .main-content h2 {
+            font-size: 4vw;
+            margin-bottom: 40px;
+            margin-left: 5%;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        @media (max-width: 768px) {
+            .main-content h1 {
+                font-size: 10vw;
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .main-content h2 {
+                font-size: 6vw;
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            } 
+        }
+
+        .contint {
+            background: linear-gradient(180deg, #1e3c72, #2a5298, #f6d365);
+            padding: 5%;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 1200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .content h3 {
+            font-size: 2em;
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .content ul li:before {
+            content: "✔";
+            color: #1e3c72;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .content .did-you-know {
+            background: #1e3c72;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .content .did-you-know h4 {
+            margin: 0 0 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="https://rodchryan.github.io/Market/Front%20Page/Market.html">HOME</a>
+        <a href="https://rodchryan.github.io/Market/Contact/Contact%20Us/index.html">CONTACT</a>
+        <a href="https://rodchryan.github.io/Market/Front%20Page/AboutUs.html">ABOUT</a>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="menu" id="mobileMenu">
+        <a href="https://rodchryan.github.io/Market/Front%20Page/Market.html">HOME</a>
+        <a href="https://rodchryan.github.io/Market/Contact/Contact%20Us/index.html">CONTACT</a>
+        <a href="https://rodchryan.github.io/Market/Front%20Page/AboutUs.html">ABOUT</a>
+    </div>
+
+    <div class="main-content">
+        <h1>FINANCIAL MARKET</h1>
+        <h2>The financial market is a platform where individuals, businesses, and governments trade financial securities, commodities, and other assets.</h2>
+    </div>
+
+    <div class="contint">
+        <div class="content">
+            <h3>What is a Financial Market?</h3>
+            <p>
+                A financial market is a venue that facilitates the buying and selling of financial instruments such as stocks, bonds, currencies, and derivatives. These markets play a crucial role in the global economy by allocating resources and providing liquidity to businesses and individuals.
+            </p>
+
+            <h3>Types of Financial Markets</h3>
+            <p>
+                Financial markets can be categorized into various types, each serving a unique purpose:
+            </p>
+            <ul>
+                <li>Stock Market: Facilitates the trading of company shares.</li>
+                <li>Bond Market: Deals with the issuance and trading of debt securities.</li>
+                <li>Forex Market: Focuses on currency trading.</li>
+                <li>Commodities Market: Involves trading of physical goods like gold, oil, and agricultural products.</li>
+                <li>Derivatives Market: Enables trading of contracts based on underlying assets.</li>
+            </ul>
+
+            <h3>Benefits of Financial Markets</h3>
+            <ul>
+                <li>Efficient allocation of capital and resources</li>
+                <li>Liquidity for investors</li>
+                <li>Price discovery through market mechanisms</li>
+                <li>Risk management through diversification</li>
+            </ul>
+
+            <h3>Challenges of Financial Markets</h3>
+            <ul>
+                <li>Market volatility and risk of losses</li>
+                <li>Possibility of fraud or manipulation</li>
+                <li>Complexity for new participants</li>
+                <li>Dependence on economic and political factors</li>
+            </ul>
+
+            <h3>Real-World Examples</h3>
+            <p>
+                Major financial markets include the <b>New York Stock Exchange (NYSE)</b>, <b>NASDAQ</b>, <b>London Stock Exchange</b>, and <b>Tokyo Stock Exchange</b>. These platforms facilitate trillions of dollars in transactions daily.
+            </p>
+
+            <div class="did-you-know">
+                <h4>Did You Know?</h4>
+                <p>
+                    The first modern stock exchange was established in Amsterdam in 1602 by the Dutch East India Company, paving the way for global financial markets.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
