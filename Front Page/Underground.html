@@ -1,95 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Underground Market</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #5b019d, #fd9c00);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: white;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underground Market</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url("images/underground.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
 
-    .main-container {
-      width: 90%;
-      max-width: 900px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
+        @media (max-width: 768px) {
+            body {
+                background: linear-gradient(135deg, #2d2d2d, #4b4b4b);
+                background-repeat: no-repeat;
+            }
+        }
 
-    .text-section {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        .header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
 
-    .text-section .heading {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .text-section .subheading {
-      font-size: 1.2rem;
-    }
+        .header a:hover {
+            text-decoration: underline;
+        }
 
-    .image-container {
-      width: 100%;
-      max-width: 400px;
-    }
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
 
-    .image-container img {
-      width: 100%;
-      border-radius: 8px;
-    }
+        .menu-icon div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+        }
 
-    @media (min-width: 768px) {
-      .main-container {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
 
-      .text-section {
-        text-align: left;
-        max-width: 60%;
-      }
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
-      .text-section .heading {
-        font-size: 3rem;
-      }
+        .menu a:last-child {
+            border-bottom: none;
+        }
 
-      .text-section .subheading {
-        font-size: 1.5rem;
-      }
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
 
-      .image-container {
-        max-width: 300px;
-      }
-    }
-  </style>
+        .main-content {
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .main-content h1 {
+            font-size: 6vw;
+            margin-bottom: 10px;
+            margin-left: 5%;
+            text-align: left;
+        }
+
+        .main-content h2 {
+            font-size: 4vw;
+            margin-bottom: 40px;
+            margin-left: 5%;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        @media (max-width: 768px) {
+            .main-content h1 {
+                font-size: 10vw;
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .main-content h2 {
+                font-size: 6vw;
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            } 
+        }
+        .contint{
+            background: linear-gradient(180deg, #2b2b2b, #4a4a4a, #6a6a6a);
+            padding: 5%;
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.9);
+            color: #ddd;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 1200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .content h3 {
+            font-size: 2em;
+            color: #e63946;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .content ul li:before {
+            content: "\2714";
+            color: #e63946;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .content .did-you-know {
+            background: #e63946;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .content .did-you-know h4 {
+            margin: 0 0 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="main-container">
-    <div class="text-section">
-      <div class="heading">UNDERGROUND<br />MARKET</div>
-      <div class="subheading">
-        An illegal market where transactions occur without the knowledge of the government or other regulatory agencies.
-      </div>
+    <div class="header">
+        <a href="https://rodchryan.github.io/Market/Front%20Page/Market.html">HOME</a>
+        <a href="https://rodchryan.github.io/Market/Contact/Contact%20Us/index.html">CONTACT</a>
+        <a href="https://rodchryan.github.io/Market/Front%20Page/AboutUs.html">ABOUT</a>
     </div>
-    <div class="image-container">
-      <img src="image.png" alt="Person with mask using a computer" />
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
-  </div>
+
+    <div class="menu" id="mobileMenu">
+        <a href="https://rodchryan.github.io/Market/Front%20Page/Market.html">HOME</a>
+        <a href="https://rodchryan.github.io/Market/Contact/Contact%20Us/index.html">CONTACT</a>
+        <a href="https://rodchryan.github.io/Market/Front%20Page/AboutUs.html">ABOUT</a>
+    </div>
+
+    <div class="main-content">
+        <h1>UNDERGROUND MARKET</h1>
+        <h2>The underground market operates outside legal and regulatory boundaries, facilitating trade in goods and services that are restricted or untaxed.</h2>
+    </div>
+    <div class="contint">
+        <div class="content">
+            <h3>What is an Underground Market?</h3>
+            <p>
+                The underground market, also known as the black market, refers to the illicit trade of goods and services that are illegal, prohibited, or not taxed by the government. It thrives on secrecy and often operates beyond the reach of regulatory authorities.
+            </p>
+
+            <h3>How Underground Markets Operate</h3>
+            <p>
+                Transactions in the underground market are conducted through discreet networks, often using untraceable payment methods like cash or cryptocurrency. These markets bypass regulations and taxes, creating an alternative economy that can evade government oversight.
+            </p>
+
+            <h3>Examples of Underground Market Activities</h3>
+            <ul>
+                <li>Trafficking of illegal substances</li>
+                <li>Unregulated sale of weapons</li>
+                <li>Counterfeit goods and currency</li>
+                <li>Smuggling restricted items across borders</li>
+            </ul>
+
+            <h3>Challenges of Underground Markets</h3>
+            <ul>
+                <li>Lack of consumer protection</li>
+                <li>Encourages criminal activity</li>
+                <li>Loss of government revenue</li>
+                <li>Risk of exploitation and unsafe practices</li>
+            </ul>
+
+            <h3>Real-World Insights</h3>
+            <p>
+                The rise of the dark web has amplified underground market activities, making it easier for individuals to access illegal goods and services while maintaining anonymity.
+            </p>
+
+            <div class="did-you-know">
+                <h4>Did You Know?</h4>
+                <p>
+                    The underground market in counterfeit luxury goods alone is estimated to generate billions of dollars annually, with fake designer items flooding global markets.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
