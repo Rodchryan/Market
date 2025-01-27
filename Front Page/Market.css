@@ -13,6 +13,9 @@ body {
             body {
                 background: linear-gradient(135deg, #5b019d, #fd9c00);
                 background-repeat: no-repeat;
+                ackground-size: cover;
+                background-position: center;
+                background-attachment: fixed;
             }
         }
 
